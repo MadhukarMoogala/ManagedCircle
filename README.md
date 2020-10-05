@@ -64,9 +64,12 @@ Expected Build Log
 ```
 
 ## To Use
-appload ManagedCircle\x64\Debug\dbxCircle.dbx
-appload ManagedCircle\x64\Debug\ArxProject1.arx
-netload ManagedCircle\x64\Debug\ManagedTest.dll
+```bash
+appload "ManagedCircle\x64\Debug\dbxCircle.dbx"
+appload "ManagedCircle\x64\Debug\ArxProject1.arx"
+netload "ManagedCircle\x64\Debug\ManagedTest.dll"
+```
+
 
 ## Testing
 ```bash
