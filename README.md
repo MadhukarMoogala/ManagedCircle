@@ -7,9 +7,16 @@
 This sample is created with [ObjectARX Wizard](https://github.com/ADN-DevTech/ObjectARX-Wizards/tree/ForAutoCAD2021) to show how to create a Managed Wrapper .NET API to AutoCAD
 C++ API, in this example we extend to API `asdkCustomCircleMgd::setCenter` and `asdkCustomCircleMgd::setRadius`
 
+## Demo
+
+![DemoImage](https://github.com/MadhukarMoogala/ManagedCircle/blob/master/Demo.gif)
+
+
+
 ## Step To Build
+
 ```
-git clone 
+git clone https://github.com/MadhukarMoogala/ManagedCircle.git
 cd ManagedCircle
 set ObjectARXPATH=<arxsdkpath>
 set AcadDir=<AutoCAD Install Folder>
