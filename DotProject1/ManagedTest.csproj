@@ -92,16 +92,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="accoremgd">
-      <HintPath>C:\rogue\AutoCAD 2021\accoremgd.dll</HintPath>
+      <HintPath>D:\ACAD\ursa\AutoCAD 2024\accoremgd.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="acdbmgd">
-      <HintPath>C:\rogue\AutoCAD 2021\acdbmgd.dll</HintPath>
+      <HintPath>D:\ACAD\ursa\AutoCAD 2024\acdbmgd.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="ManagedWrapper">
       <HintPath>..\x64\Debug\ManagedWrapper.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
   </ItemGroup>

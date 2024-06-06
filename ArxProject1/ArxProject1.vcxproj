@@ -12,6 +12,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{59522239-4FF8-461A-941E-FB57144B0242}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
@@ -28,7 +29,7 @@
     <UseOfAtl>false</UseOfAtl>
     <CharacterSet>Unicode</CharacterSet>
     <CLRSupport>false</CLRSupport>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -51,8 +52,8 @@
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</LinkIncremental>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.arx</TargetExt>
-    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\ObjectARX 2015\inc;D:\ObjectARX 2015\inc-x64;$(IncludePath)</IncludePath>
-    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\ObjectARX 2015\lib-x64;$(LibraryPath)</LibraryPath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IncludePath)</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <VcpkgEnabled>false</VcpkgEnabled>
@@ -60,8 +61,8 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>D:\Work\ObjectARX2021\inc;D:\Work\ObjectARX2021\inc-x64;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalUsingDirectories>C:\rogue\AutoCAD 2021;%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalUsingDirectories>%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
       <PreprocessorDefinitions>_WIN64;_WINDOWS;ARXPROJECT1_MODULE;_ACRXAPP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>false</StringPooling>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -86,7 +87,7 @@
       <SubSystem>Windows</SubSystem>
       <ImportLibrary>$(OutDir)ArxProject1.lib</ImportLibrary>
       <TargetMachine>MachineX64</TargetMachine>
-      <AdditionalDependencies>dbxCircle.lib;accore.lib;ac1st24.lib;acdb24.lib;acad.lib;acapp.lib;rxapi.lib;acapp_crx.lib;acge24.lib;acgiapi.lib;acismobj24.lib;axdb.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>dbxCircle.lib;accore.lib;ac1st24.lib;acdb24.lib;acad.lib;acapp.lib;rxapi.lib;acapp_crx.lib;acge24.lib;acgiapi.lib;acismobj24.lib;axdb.lib;acpal.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
