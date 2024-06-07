@@ -27,7 +27,7 @@ using Autodesk.AutoCAD.Geometry;
 using Autodesk.AutoCAD.EditorInput;
 
 using ADN.CustomWrapper;
-using Autodesk.AutoCAD.ApplicationServices.Core;
+using AcadApp = Autodesk.AutoCAD.ApplicationServices.Application;
 
 [assembly: CommandClass(typeof(ManagedTest.Commands))]
 
@@ -38,18 +38,19 @@ namespace ManagedTest
         public void Initialize()
         {
             RXClass rxc = asdkCustomCircleMgd.GetClass(typeof(asdkCustomCircleMgd));
-            Application.ShowAlertDialog($"Custom Object: \n{rxc.DxfName}");
+            AcadApp.ShowAlertDialog($"Custom Object: \n{rxc.DxfName}");
         }
 
         public void Terminate()
         {
-            
+            // Clean up
+             
         }
 
         [CommandMethod("AddObjectMng")]
         static public void AddObjectMng()
         {
-            Document doc = Application.DocumentManager.MdiActiveDocument;
+            Document doc = AcadApp.DocumentManager.MdiActiveDocument;
             Database db = doc.Database;
             Editor ed = doc.Editor;
 
@@ -74,10 +75,8 @@ namespace ManagedTest
                 entity.setRadius(3.0);
                 entity.gc2AcString("My Test String");
                 entity.convertFromMgdObjectId(model.Id);
-
                 model.AppendEntity(entity);
                 Tx.AddNewlyCreatedDBObject(entity, true);
-
                 Tx.Commit();
             }
         }
@@ -85,7 +84,8 @@ namespace ManagedTest
         [CommandMethod("GetObjectMng")]
         static public void GetObjectMng()
         {
-            Document doc = Application.DocumentManager.MdiActiveDocument;
+            Document doc = AcadApp.DocumentManager.MdiActiveDocument;
+            if (doc is null) return;
             Database db = doc.Database;
             Editor ed = doc.Editor;
 

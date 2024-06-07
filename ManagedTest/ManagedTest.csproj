@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>Library</OutputType>
+        <RootNamespace>ManagedTest</RootNamespace>     
+        <TargetFramework>net8.0-windows</TargetFramework>
+        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+        <ObjectARXPATH Condition="'$(ObjectARXPATH)' == ''">D:\ArxSdks\arx2025</ObjectARXPATH>
+        <AssemblySearchPaths>$(ObjectARXPATH)\inc\;$(AssemblySearchPaths)</AssemblySearchPaths>
+        <Platforms>x64</Platforms>
+    </PropertyGroup>
+    <ItemGroup>
+        <FrameworkReference Include="Microsoft.WindowsDesktop.App"/>
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\ManagedWrapper\ManagedWrapper.vcxproj" />
+    </ItemGroup>
+    <ItemGroup>
+        <Reference Include="AcDbMgd">
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="AcMgd">
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="AcCoreMgd">
+            <Private>False</Private>
+        </Reference>
+    </ItemGroup>
+    <Target Name="CopyFiles" AfterTargets="Build">
+        <Message Text="Copying $(ProjectName).dll to $(SolutionDir)x64\Debug" Importance="high"></Message>
+        <Message Text="--------------------------------------Congrats-------------------------------------" Importance="high"></Message>      
+        <Message Text ="Now load following modules in specified order in AutoCAD
+                        1) appload $(SolutionDir)x64\Debug\dbxCircle.dbx
+                        2) appload $(SolutionDir)x64\Debug\ArxProject1.arx
+                        3) NETLOAD $(SolutionDir)x64\Debug\ManagedTest.dll" Importance="high"></Message>
+        <Message Text="To create a custom circle run arx based command ADDCUSTCIRCLE in AutoCAD Commandline,
+        to identify a custom circle and change it's color run .NET core based command GETOBJECTMNG in AutoCAD Commandline" Importance="high"></Message>
+        <Message Text="---------------------------------------Done!----------------------------------------" Importance="high"></Message>
+        <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(SolutionDir)\x64\Debug" ></Copy>
+    </Target>
+</Project> 

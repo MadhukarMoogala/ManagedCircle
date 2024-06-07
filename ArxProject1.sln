@@ -10,7 +10,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ArxProject1", "ArxProject1\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dbxCircle", "dbxCircle\dbxCircle.vcxproj", "{A7A575FE-C17C-45C2-9E21-82E995C3767C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagedTest", "DotProject1\ManagedTest.csproj", "{3B4E70CA-6BDF-45F7-993D-6B1F71D120DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManagedTest", "ManagedTest\ManagedTest.csproj", "{3B4E70CA-6BDF-45F7-993D-6B1F71D120DE}"
 	ProjectSection(ProjectDependencies) = postProject
 		{A7CEFFBE-2EBA-4E7B-8CB9-A66BF649817C} = {A7CEFFBE-2EBA-4E7B-8CB9-A66BF649817C}
 	EndProjectSection

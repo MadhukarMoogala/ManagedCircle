@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0"
+  xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros">
-    <ObjectARXPath>D:\ArxSDKs\arx2024</ObjectARXPath>
-    <AcadDir>D:\ACAD\ursa\AutoCAD 2024</AcadDir>
+    <ObjectARXPath>D:\ArxSDKs\arx2025</ObjectARXPath>
+    <AcadDir>D:\ACAD\venn\AutoCAD 2025</AcadDir>
   </PropertyGroup>
   <PropertyGroup />
   <ItemDefinitionGroup>
@@ -13,7 +14,7 @@
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(ObjectARXPath)\Lib-x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>ac1st24.lib;acad.lib;acapp.lib;acapp_crx.lib;AcCamera.lib;accore.lib;acdb24.lib;acdbmgd.lib;AcDbPointCloudObj.lib;AcDrawBridge.lib;AcFdEval.lib;AcFdUi.lib;acge24.lib;AcGeolocationObj.lib;acgeoment.lib;acgiapi.lib;acismobj24.lib;AcJsCoreStub_crx.lib;aclmvexport_crx.lib;acModelDocObj.lib;AcMPolygonObj.lib;AcPal.lib;AcPublish_crx.lib;AcSceneOE.lib;AcTc.lib;AcTcUi.lib;acui24.lib;AdApplicationFrame.lib;adui24.lib;aNav.lib;axdb.lib;rxapi.lib;userdata.lib</AdditionalDependencies>
+      <AdditionalDependencies>ac1st25.lib;acad.lib;acapp.lib;acapp_crx.lib;AcCamera.lib;accore.lib;acdb25.lib;acdbmgd.lib;AcDbPointCloudObj.lib;AcDrawBridge.lib;AcFdEval.lib;AcFdUi.lib;acge25.lib;AcGeolocationObj.lib;acgeoment.lib;acgiapi.lib;acismobj25.lib;AcJsCoreStub_crx.lib;aclmvexport_crx.lib;acModelDocObj.lib;AcMPolygonObj.lib;AcPal.lib;AcPublish_crx.lib;AcSceneOE.lib;AcTc.lib;AcTcUi.lib;acui25.lib;AdApplicationFrame.lib;adui25.lib;aNav.lib;axdb.lib;rxapi.lib;userdata.lib</AdditionalDependencies>
       <ModuleDefinitionFile>$(ObjectARXPath)\inc\AcRxDefault.def</ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>
@@ -27,4 +28,5 @@
       <EnvironmentVariable>true</EnvironmentVariable>
     </BuildMacro>
   </ItemGroup>
+
 </Project>
